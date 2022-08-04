@@ -3,7 +3,7 @@ let gridsize = 16;
 
 function changeColor() {
     if(mode == 'default'){
-        this.style.background = "white";
+        this.style.background = "black";
     }
 }
 
@@ -19,7 +19,6 @@ function createGrid(gridsize) {
         newDiv.classList.add("canvas_element");
         newDiv.addEventListener('mouseenter', changeColor)
         parentDiv.appendChild(newDiv)
-
     }
 }
 
@@ -31,6 +30,11 @@ function changeSize() {
         gridsize = newSize
         createGrid(gridsize)
     }
+}
+
+function clearGrid() {
+    createGrid(gridsize);
+    console.log("Grid cleared!");
 }
 
 createGrid(gridsize)

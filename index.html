@@ -8,13 +8,14 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <div id="options">
+    <div id="size">
         <input type="text" id="grid-size" placeholder="Enter a number (Max 100)">
         <button onclick="changeSize()">Change Grid Size</button>
     </div>
+    
     <div id="canvas"></div>
     <div id="options">
-        <button onclick="clear()">Clear Grid</button>
+        <button id="changeSize" onclick="clearGrid()">Clear Grid</button>
     </div>
 
     <script src="script.js"></script>
