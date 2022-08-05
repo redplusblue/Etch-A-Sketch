@@ -13,6 +13,8 @@ function changeColor() {
         this.style.background = `rgb(${r}, ${g}, ${b})`;
     } else if(mode == 'none') {
         return
+    } else if(mode == 'erase') {
+        this.style.background = 'white'
     }
 }
 
@@ -52,6 +54,10 @@ function randomMode(){
 
 function defaultMode() {
     mode = 'default';
+}
+
+function eraseMode (){
+    mode = 'erase';
 }
 
 function drawMode() {
