@@ -24,7 +24,7 @@ function createGrid(gridsize) {
 
 function changeSize() {
     newSize = document.getElementById('grid-size').value
-    if (newSize > 100 || newSize < 0) {
+    if (newSize > 100 || newSize <= 0 || newSize == null) {
         alert("Invalid Grid Size!")
     } else {
         gridsize = newSize
@@ -34,7 +34,6 @@ function changeSize() {
 
 function clearGrid() {
     createGrid(gridsize);
-    console.log("Grid cleared!");
 }
 
 createGrid(gridsize)

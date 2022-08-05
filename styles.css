@@ -11,12 +11,48 @@ body {
     gap: 20px;
 }
 
+#size {
+    display: grid;
+    grid-template-rows: 40% 50%;
+    gap: 12px;
+}
+
+#btn{
+    background-color: aquamarine;
+    border: 2px solid #008CBA;
+    font-size: 100%;
+    width: 103%;
+}
+
+#grid-size {
+    border: 2px solid #008CBA;
+    width: 99%;
+    height: 106%;
+}
+
+#btn:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+#changeSize {
+    background-color: aquamarine;  
+    border: 2px solid #f44336;
+    font-size: 100%;
+    width: 103%;
+}
+
+#changeSize:hover {
+    background-color: #f44336;
+    color: white;
+}
 
 #canvas {
     display: grid;
     grid-template-columns: repeat(16, 2.5%);
-    border: 3px solid rgba(0, 0, 0, 0.6);
+    border: 5px solid rgba(0, 0, 0, 0.8);
 }
+
 
 .canvas_element {
     background-color: white;
