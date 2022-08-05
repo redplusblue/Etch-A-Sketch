@@ -1,22 +1,7 @@
 let mode = 'default';
 let gridsize = 16;
 let memoryMode = 'default';
-
-function changeColor() {
-    if(mode == 'default'){
-        this.style.background = "black";
-    } else if(mode == 'random') {
-        r = Math.floor(Math.random() * 255);
-        g = Math.floor(Math.random() * 255);
-        b = Math.floor(Math.random() * 255);
-        console.log(r,g,b);
-        this.style.background = `rgb(${r}, ${g}, ${b})`;
-    } else if(mode == 'none') {
-        return
-    } else if(mode == 'erase') {
-        this.style.background = 'white'
-    }
-}
+let gridColor = '';
 
 function createGrid(gridsize) {
     document.getElementById('canvas').style.gridTemplateColumns = `repeat(${gridsize} ,20px)`;
@@ -31,6 +16,38 @@ function createGrid(gridsize) {
         newDiv.addEventListener('mouseenter', changeColor)
         newDiv.addEventListener('contextmenu', drawMode)
         parentDiv.appendChild(newDiv)
+        
+    }
+    color = document.getElementById('color')
+    color.addEventListener('change', modeSwitch('color'), false)
+}
+
+function changeColor() {
+    if(mode == 'default'){
+        this.style.background = "black";
+    } else if(mode == 'random') {
+        r = Math.floor(Math.random() * 255);
+        g = Math.floor(Math.random() * 255);
+        b = Math.floor(Math.random() * 255);
+        console.log(r,g,b);
+        this.style.background = `rgb(${r}, ${g}, ${b})`;
+    } else if(mode == 'none') {
+        return
+    } else if(mode == 'erase') {
+        this.style.background = 'white'
+    } else if (mode =='color') {
+        gridColor = document.getElementById('color').value
+        this.style.background = `${gridColor}`;
+    } else if (mode =='sketch') {
+        alert("Coming Soon!")
+        /*this.style.background = 'black';
+        const opacity = this.style.opacity
+        if(opacity) {
+            this.style.opacity = opacity + 0.1;
+        } else {
+            this.style.opacity = 0.1;
+        }*/
+        
     }
 }
 
@@ -48,31 +65,19 @@ function clearGrid() {
     createGrid(gridsize);
 }
 
-function randomMode(){
-    mode = 'random';
-}
-
-function defaultMode() {
-    mode = 'default';
-}
-
-function eraseMode (){
-    mode = 'erase';
-}
-
 function drawMode() {
-    if(mode == 'none') {
+    if(mode == 'erase') {
         mode = memoryMode;
     }
     else {
         memoryMode = mode;
-        mode = 'none';
+        mode = 'erase';
     }
+}
+
+function modeSwitch(requiredMode){
+    mode = requiredMode;
 }
 
 createGrid(gridsize)
 
-/*document.addEventListener('contextmenu' ,() => {
-    
-})
-*/

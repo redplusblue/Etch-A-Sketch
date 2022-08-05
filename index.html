@@ -13,19 +13,22 @@
         <button id="btn" onclick="changeSize()"><b>Change Grid Size</b></button>
     </div>
     <div id="instructions">
-        <h2>To draw, move your mouse to the grid, to stop drawing, right click!</h2>
-        <h4>Right click is a toggle.</h4>
+        <h4>Tip: Right click is a toggle for erase.</h4>
     </div>
         <div id="canvas" oncontextmenu="return false;"></div>
 
     
     <div id="options">
         <div id = "mode-list">
-            <button id="btn" onclick="eraseMode()"><b>Eraser</b></button>
-            <button id="btn" onclick="randomMode()"><b>Random Mode</b></button>
-            <button id="btn" onclick="defaultMode()"><b>Default Mode</b></button>
+            <input type="color" id="color" name="color" value="#000000">
+            <button id="btn" onclick="alert('Coming Soon!')"><b>Sketch</b></button>
         </div>
-        <div>
+        <div id = "mode-list">
+            <button id="btn" onclick="modeSwitch('default')"><b>Default Mode</b></button>
+            <button id="btn" onclick="modeSwitch('random')"><b>Random Mode</b></button>
+        </div>
+        <div id="mode-list">
+            <button id="btn" onclick="modeSwitch('erase')"><b>Eraser</b></button>
             <button id="btn" onclick="clearGrid()"><b>Clear Grid</b></button>
         </div>
         
