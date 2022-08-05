@@ -9,13 +9,24 @@
 </head>
 <body>
     <div id="size">
-        <input type="text" id="grid-size" placeholder="Number (Between 1 and 100)">
+        <input type="text" id="grid-size" placeholder="  Enter A Number in 1-100">
         <button id="btn" onclick="changeSize()"><b>Change Grid Size</b></button>
     </div>
+    <div id="instructions">
+        <b>To draw, move your mouse to the grid, to stop drawing, right click!</b>
+    </div>
+        <div id="canvas" oncontextmenu="return false;"></div>
+
     
-    <div id="canvas"></div>
     <div id="options">
-        <button id="changeSize" onclick="clearGrid()"><b>Clear Grid</b></button>
+        <div id = "mode-list">
+            <button id="btn" onclick="randomMode()"><b>Random Mode</b></button>
+            <button id="btn" onclick="defaultMode()"><b>Default Mode</b></button>
+        </div>
+        <div>
+            <button id="btn" onclick="clearGrid()"><b>Clear Grid</b></button>
+        </div>
+        
     </div>
 
     <script src="script.js"></script>
