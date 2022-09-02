@@ -2,7 +2,7 @@
 ### Etch-A-Sketch using HTML/CSS/JS, an exercise for [TheOdinProject](theodinproject.com)
 #### Click on the picture/the link below to try!
 
-<a href="https://redplusblue.github.io/etch-a-sketch/"><img src="files/preview.png"></a>
+<a href="https://redplusblue.github.io/etch-a-sketch/"><img src="files/preview.png" alt="A preview picture" title="Click Me!"></a>
 
 ## [Click to open](https://redplusblue.github.io/etch-a-sketch/)
 
